@@ -1,0 +1,68 @@
+= README
+
+== Website Built with Asciidoctor
+
+This website is built with Asciidoctor and using one command.
+It uses a custom Slim template.
+
+* index.txt
+* one.txt
+* two.txt
+* three.txt
+
+There are also these included files
+
+* header.txt
+* footer.txt
+
+Here is a demo of this website.
+http://tedbergeron.github.io/AsciidoctorCustomTemplate/
+
+The center white area of the pages comes from the AsciiDoc content in the text files.
+The surrounding black and gray areas are controlled in the template.
+
+
+
+== Creating Custom Templates for Asciidoctor
+
+Create a Slim template
+
+* document-html.slim
+
+NOTE: The template links to the asciidoctor.css style sheet.
+
+You can edit the template's header, column one, column three and the footer.
+
+== Run Asciidoctor at the command prompt
+
+[source, Command Line]
+----
+> asciidoctor -T template/slim *.txt
+----
+
+
+
+
+=== Requires the following to use Slim
+
+Ensure Asciidoctor, Slim and their dependencies are installed:
+
+[source, Command Line]
+----
+> gem install asciidoctor tilt thread_safe
+  gem install slim --version 2.1.0
+----
+
+CAUTION: They recommend using Slim 2.1.0 until issue #8 is resolved.
+
+== Hey your .adoc files are .txt
+
+I know, but it works either way. So .txt gives you another option instead of using .adoc
+
+
+== Tutorial
+
+For more information, see my tutorial on how to build a website with Asciidoctor.
+http://tedbergeron.github.io/2015/08/16/How-to-Build-a-Website-with-Asciidoctor.html
+
+It is the same as this without the Slim template.
